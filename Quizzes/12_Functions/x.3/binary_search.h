@@ -1,7 +1,7 @@
 #ifndef BINARY_SEARCH_H
 #define BINARY_SEARCH_H
 
-#include <iterator>
+#include <iterator> // for std::distance
 
 template <typename Iterator, typename ElementType>
 Iterator binarySearch(Iterator begin, Iterator end, const ElementType target)
