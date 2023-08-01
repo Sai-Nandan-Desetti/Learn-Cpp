@@ -1,0 +1,7 @@
+The call to makeWalrus creates a temporary std::string from the string literal “Roofus”. The lambda in makeWalrus captures the temporary string by reference. The temporary string dies when makeWalrus returns, but the lambda still references it. Then when we call sayName, the dangling reference is accessed, causing undefined behavior.
+
+Q: Why does the lambda not print the name Roofus? The makeWalrus function takes in a string name by reference and then the Lambda takes in the name as a reference. I understand the name variable goes out of scope and gets destroyed when the lambda gets returned, but the name variable was just a reference to the const string "Roofus". Since the original call is in main, why does is not print Roofus?
+
+A:
+Great question. "Roofus" is a C-style string, but the lambda takes a const std::string& parameter. This means that "Roofus" must be converted to a std::string in order for the reference parameter to bind to it. This converted string is a temporary that dies at the end of the expression!
+If our lambda had std::string_view instead, there would have been no conversion, and because C-style strings have static duration, we would have avoided this issue.

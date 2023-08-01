@@ -1,0 +1,22 @@
+Fizz Buzz
+
+Given:
+    - Rules of the game Fizz Buzz
+    - a parameter `n` till when the game must be played
+
+To do:
+    - Play the game according to the given rules till `n`
+    - Use a for-loop and a single if-else chain.
+
+
+void fizzbuzz(unsigned int n)
+    for i from 1 to n:
+        if i % 15 != 0:
+            if i % 3 == 0:
+                print "fizz"
+            elif i % 5 == 0:
+                print "buzz"            
+            else:
+                print i
+        else:
+            print "fizzbuzz"

@@ -1,0 +1,7 @@
+Alphabet Printer
+
+Given:
+    -
+
+To do:
+    - Print a to z along with their ascii codes

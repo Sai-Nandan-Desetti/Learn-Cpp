@@ -1,0 +1,22 @@
+Integer Switch-Case Calculator
+
+Given:
+    - Two integers
+    - character corresponding to one of the following operations: +, -, *, /, *
+
+To do:
+    - calculate the (integral) result of the given operation
+
+
+void calculate(int x, int y)
+    - Get the operation from the user
+    - Use switch case to compute the appropriate result   
+    - Use `default` to print an error message
+    - U cannot return an integer
+        - What value would you choose to return?
+            - Zero?
+            - Then, how would you distinguish if the returned value was due to a valid
+            or an invalid operation?
+            - With any other value the problem is same.
+        - We haven't learnt about exceptions yet.
+    - Just display the result within the function itself

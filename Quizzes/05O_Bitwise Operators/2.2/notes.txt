@@ -1,0 +1,20 @@
+Bitwise Rotate Left
+
+Given:
+     - a binary number
+        - containing 4 bits
+        - represented as bitset<4>
+
+To do:
+    - compute its left rotation
+
+Example:
+    rotl(1001) -> 0011
+
+
+std::bistset<4> rotl(std::bitset<4> bits):
+    - test the left-most bit
+    - shift left by 1 bit
+    - set the same value to the right-most bit
+
+IMPORTANT: We count from right to left; starting from 0.

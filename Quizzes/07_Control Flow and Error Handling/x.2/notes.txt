@@ -1,0 +1,15 @@
+IsPrime
+
+Given:
+    - an integer
+
+To do:
+    - check if the given integer is prime or not.
+
+
+bool isPrime(int x)
+    - for factor from 2 to sqrt(x):
+        if x is divisible by factor:
+            return false
+    
+    return true

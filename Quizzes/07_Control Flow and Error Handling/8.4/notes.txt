@@ -1,0 +1,45 @@
+Spaced Triangle Printer
+
+Given:
+    - a triangle with (spaces in the front) to print
+
+To do:
+    - print the given triangle
+
+
+Version 0.1:
+    Question itself read WRONG!
+    - In each row, first print the spaces until a certain point, then start printing numbers from 1 onwards.
+    - In row 1, till 1.
+    - In row 2, till 2.
+    - In row 3, till 3.
+    ... and so on.
+
+    - Till when we've to keep printing spaces.
+    - Total rows = 5.
+
+    - Row 1: 4(= 5-1)*2 spaces. Print till 1.
+    - Row 2: 3(= 5-2)*2 spaces. Print till 2.
+
+    - Row x: (5-x)*2 spaces. Print till x.
+
+
+Version 0.2:
+    - Row 1: 4(= 5-1)*2 spaces. Print 1 ... 1.
+    - Row 2: 3(= 5-2)*2 spaces. Print 2 ... 1.
+
+    - Row x: (5-x)*2 spaces. Print x ... 1.
+
+
+Version 0.3:
+    - `n` scans through numbers to print in each row
+    - `rowNum` scans through the rows of the triangle
+    - In each row:
+        - n starts from 5
+        - If n <= rowNum
+            - print n followed by ' '
+        - Else
+            - print ' ' followed by ' '
+        - n decrements by 1...
+        - ... till 1.
+        - print '\n'

@@ -1,0 +1,4 @@
+Swap with just two variables:
+    - a = a XOR b
+    - b = a XOR b
+    - a = a XOR b

@@ -1,0 +1,7 @@
+- If we want to change default color to "red", we have to change it in two places.
+    - It seems like it'd be better to have members value-initialized!
+    - Contrast this with what I felt in Quiz 7.1
+
+- If members were value-initialized, then we'd have to increase the number of constructors
+    - Some say that the lesser number of constructors, the better.
+    - But no one's really sure.

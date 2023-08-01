@@ -1,0 +1,33 @@
+main()
+    Ask user to enter two floating point numbers. (Use doubles)
+        Store them as (say) x and y.
+    Ask user for the operation:        
+        If +: x + y
+        If -: x - y (my assumption; could've as well been y - x)
+        If *: x * y
+        If /: x / y (my assumption; could've as well been y / x)
+        Else: Don't print anything.
+
+Each of the operations can have its own function.
+Because, sometimes, additional checks may have to be performed on the input data
+before we apply the operation. Eg: Check if y is zero before we divide.
+
+Store the functions in operations.cpp
+Create a pairing header file and include this in main.cpp
+
+Functions:
+Each function takes two double inputs and outputs a double.
+
+The logic for printing the result should be put in a separate function
+(because the code for that is reusable).
+1. Where should this function be defined? In main.cpp?
+    Or group all the functions pertaining to arithmetic operations and the print in a single functions.cpp?
+
+    Or have a separate display.cpp just for the print function?
+        Then, this must have a matching header file that must be included in main.cpp.
+
+2. How do you print the result when y = 0 and the operation = /?
+    If the print function takes a double value as an argument, then what value will represent
+    the divide-by-zero situation?
+
+Well, the compiles seems to handle the divide-by-zero case; it treats it as 'inf'.

@@ -1,0 +1,55 @@
+#include <iostream>
+#include <string_view>
+#include <vector>
+#include <algorithm>
+
+struct Student
+{
+    std::string name {};
+    int grade {};
+};
+
+Student getStudent()
+{
+    std::cout << "Name: ";
+    std::string name{};    
+    std::getline(std::cin >> std::ws, name);
+
+    std::cout << "Grade: ";
+    int grade{};
+    std::cin >> grade;
+
+    return {name, grade};
+}
+
+bool compareByGrade(const Student& s, const Student& t)
+{
+    return (s.grade > t.grade);
+}
+
+void print(const std::vector<Student>& students)
+{
+    for (const Student& student : students)    
+        std::cout << student.name << " got a grade of " << student.grade << ".\n";    
+}
+
+int main()
+{
+    std::cout << "Enter the number of students in your class: ";
+    std::size_t numStudents{};
+    std::cin >> numStudents;
+
+    std::vector<Student> students(numStudents);
+    for (Student& student : students)
+    {
+        student = getStudent();
+        std::cout << '\n';
+    }
+
+    // sort in descending order of grade
+    std::sort(students.begin(), students.end(), compareByGrade);
+    
+    print(students);
+
+    return 0;
+}

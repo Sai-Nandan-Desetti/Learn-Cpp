@@ -1,0 +1,27 @@
+Hi-Lo
+
+Given:
+    - The rules of the game Hi-Lo
+
+To do:
+    - Play the game according to the given rules
+
+
+hilo.cpp
+    - int thinkOfANumber(int min, int max)
+        - Use Mersenne Twister to generate a random number between min and max (inclusive).
+        - #include random.h
+
+    - int getUserGuess()
+        - get the user's guess
+
+    - bool hi_lo(int systemNumber, int userGuess)
+        - if systemNumber == userGuess
+            - print "Correct! You win!"
+            - return true
+        - result = "high" if systemNumber > userGuess else "low"
+        - return false
+        
+
+
+    

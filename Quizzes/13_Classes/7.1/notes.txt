@@ -1,0 +1,13 @@
+- Cannot use "this" in a member-initializer list to refer to a class member
+when you're initializing it.
+    - Eg: Can't do: this->color{ color }
+- Having initialized color, can use it later in the list to initialize some other member:
+    - Eg: color{ color }, ... , color2{ this->color }
+
+Read https://stackoverflow.com/a/7740954 to see how constructors with mem-initializer lists
+are different from a set of assignments inside the constructor.
+
+- Note: You can use "this" inside the constructor body.
+
+- If you wanted to change the default value of color to "red", you'd have to change it in two places.
+    - So, I think it's better not to have default values when defining the members.

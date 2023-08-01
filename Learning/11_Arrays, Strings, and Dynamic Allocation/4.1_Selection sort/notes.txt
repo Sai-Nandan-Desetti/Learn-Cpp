@@ -1,0 +1,18 @@
+Selection Sort
+
+Why define the function in a header file?
+    - function templates must be defined header files
+    so that the compiler what function definitions to create 
+    based on the types passsed to T
+
+    - these functions are allowed to violate the One-Definition Rule
+    provided their definitions are identical
+
+    - so defining them in a header file and including them in other files--
+    even if while linking multiple definitions are seen, there's no issue
+
+Use std::size_t for iterating and storing array size.
+    - Portability
+    - It's basically an unsigned integer type.
+        - Whether it's unsigned int, or unsigned long, or unsigned long long
+        - Implementation-dependent

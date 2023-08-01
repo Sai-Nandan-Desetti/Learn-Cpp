@@ -1,0 +1,21 @@
+Swap Smaller Larger
+
+Given:
+    - Two integers
+
+To do:
+    - If the first number is smaller: don't swap
+    - Else, swap the numbers
+    - Print smaller number first, then the larger number
+
+Is it necessary to swap?
+    - Yes.
+    - Because the values of `smaller` and `larger` are expected to change (if necessary).
+
+Do we need a function?
+    - We still didn't learn about passing-by-address or reference to functions.
+    - It's given to use a nested block.
+
+How to do the swap?
+    - Use a temp variable.
+    - Can use std::swap() from the <utility> header.

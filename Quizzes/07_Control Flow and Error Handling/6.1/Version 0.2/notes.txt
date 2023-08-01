@@ -1,0 +1,13 @@
+Integer Switch-Case Calculator
+
+Given:
+    - Two integers
+    - character corresponding to one of the following operations: +, -, *, /, *
+
+To do:
+    - calculate the (integral) result of the given operation
+
+
+std::optional calculate(int x, int y)
+    - In version 0.1 we saw that we can't return an integer because we don't know what value to return.
+    - We can use a return type of std::optional to return an "empty" value upon error.

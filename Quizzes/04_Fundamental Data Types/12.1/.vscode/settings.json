@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "span": "cpp",
+        "iostream": "cpp"
+    },
+    "C_Cpp.default.cppStandard": "c++20"
+}

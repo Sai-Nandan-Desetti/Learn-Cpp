@@ -1,0 +1,28 @@
+Square Numbers Game
+
+Given:
+    - User input:
+        - lo: lower bound
+        - n: number of elements    
+    
+To do:
+    - Pick a random number in [2, 4], say, x
+    - Generate squares of numbers multiplied by x starting from lo.
+        - list_of_squares
+    - Ask user to predict all n numbers
+    - Stop when user makes a mistake
+        - print the correct version only if it's not off by more than 4
+
+Random number generation:
+    - Mersenne Twister
+    
+Search (list_of_squares, prediction):
+    - Given a user's prediction, search in the generated list of squares
+    - Return that number in list_of_squares that's closest to prediction
+
+If the closest number if off by <= 4, then print the correct version.
+(See given example.)
+
+
+Solution folder contains the given solution.
+Read that to see how to actually code!

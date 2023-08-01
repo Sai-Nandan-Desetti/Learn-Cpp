@@ -1,0 +1,39 @@
+Decimal to Binary
+
+Given:
+    - a number between [0, 255]
+
+To do:
+    - print its binary form without using bitset and any binary operators
+
+string dec2Bin(unsigned int number)    
+    - Since we know upper bound is 255, better to go with approach 2.
+
+
+Eg: n = 163
+
+163 >= 128:
+    bin[0] = 1
+    n = 163 - 128 = 25
+
+35 >= 64: bin[1] remains 0
+
+35 >= 32:
+    bin[2] = 1
+    n = 35 - 32 = 3
+
+3 >= 16: bin[3] remains 0
+
+3 >= 8: bin[5] remains 0
+
+3 >= 4: bin[6] remains 0
+
+3 >= 2:
+    bin[7] = 1
+    n = 3 - 2 = 1
+
+1 >= 0:
+    bin[8] = 1
+    n = 1 - 0 = 1
+    
+Binary rep: 1010 0011

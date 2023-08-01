@@ -1,0 +1,14 @@
+Best practices:
+    
+    1. If you define numberOfStudents as an unsigned integer type, what do you think happens
+    when the user enters a negative integer?
+
+    2. Have an alias for std::vector<Student> as Students.
+
+    3. You've initialized a vector of Students.
+    When you call getStudent() again you're creating a new Student!
+
+    4. Use a reference in the for-each loop when dealing with structures.
+    Use const if you're not going to modify the struct in the loop.
+
+    5. Use auto to deduce the type in the loop.    

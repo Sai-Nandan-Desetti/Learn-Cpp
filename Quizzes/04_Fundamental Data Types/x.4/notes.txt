@@ -1,0 +1,36 @@
+A Free Fall Simulator
+
+Given:
+    Height of the tower (assume it's meters)
+
+To calculate:
+    Height of the ball from the ground in a given time.
+        - Time is given in seconds.
+        - Output distance is in meters.
+        - Compute using the formula given.
+
+Files:
+    - io.cpp
+    - simulation.cpp
+        - contains the function that computes the desired height
+    - main.cpp
+
+
+simulation.cpp
+    - double ballHeight(double seconds, double heightOfTower)
+        - height of tower - distance_traveled
+        - distance traveled is computed by the given formula.
+
+io.cpp    
+    - Generally, there's a separate I/O module with CLASS definitions for
+    customized input and output streams.
+    - Having separate functions for handling the display turned out to be useful
+    because of handling the special case of when the ball is reached.
+	
+Important:
+	- Understand why `const` was used.
+	- ballHeight() returns just `double`
+		- returning `const double` threw a warning: "type specifiers ignored for return types"
+			- because you're anyway going to COPY the value to some variable, say, `x`
+			- if you want the value to remain constant, then you've to define `x` as constant,			
+		- and if warnings are treated as errors, then that's an error.

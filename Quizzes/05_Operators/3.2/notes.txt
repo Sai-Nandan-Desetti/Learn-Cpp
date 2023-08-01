@@ -1,0 +1,11 @@
+Even or Odd?
+
+Given:
+    - an integer from the user
+
+To do:
+    - check if the integer is even or odd
+
+bool isEven(int n)
+    - if n % 2 == 0, n is even
+      else n is odd

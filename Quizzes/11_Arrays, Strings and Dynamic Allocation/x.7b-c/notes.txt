@@ -1,0 +1,62 @@
+A Game of Blackjack
+
+Given:
+    - The rules to play the Blackjack game.
+
+To do:
+    - Play a game of Blackjack according to the rules.
+
+Entities:
+    - Card
+        - CardRank rank:
+            - 2...10, jack, king, queen, ace
+        - CardSuit suit:
+            - club, spade, heart, diamond
+
+        - int getValue(const Card& card)
+            - getValue(card.rank)
+
+    - Deck:
+        - Card array[52]
+        - void shuffle(Deck& deck)
+        - Card getCard(const Deck& deck)
+
+Keep Player as an alias for int
+Blackjack:
+    namespace User
+    {
+        - void hit(Deck& deck, Player& player)
+            - picks a card from the deck
+            - display card to the user
+            - player's score is added with the value of the card
+            - display total value
+
+        - void chance(Deck& deck, Player& player)
+    }
+
+    namespace Dealer
+    {
+        - void hit(Deck& deck, Player& player)
+            - picks a card from the deck
+            - player's score is added with the value of the card
+
+        - void chance(Deck& deck, Player& player)
+    }
+    
+    
+    bool playBlackjack(Deck& deck)
+        - bool dealerGameOver = false, userGameOver = false
+        - Player user = 0, dealer = 0
+        - user hits twice initially; dealer once
+        
+        - while (not dealerGameOver and not userGameOver)
+            - user's chance
+            - dealer's chance
+
+        - while (not dealerGameOver)
+            - dealer's chance
+
+        - while (not userGameOver)
+            - user's chance
+
+        return user > dealer

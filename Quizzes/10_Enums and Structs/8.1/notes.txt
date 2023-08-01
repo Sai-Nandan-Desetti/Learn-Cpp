@@ -1,0 +1,11 @@
+Web Advertising
+
+Given:
+    - Advertising
+        - read
+        - clicked
+        - commission
+
+To do:
+    - Calculate how much money you make from advertising each day
+

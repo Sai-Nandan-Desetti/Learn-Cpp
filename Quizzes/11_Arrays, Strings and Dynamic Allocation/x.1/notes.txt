@@ -1,0 +1,3 @@
+Best practice:
+    - Even if you can access the enumerator directly, use it through the enum's name with
+    the scope resolution operator (just like how you use std::cout instead of just cout).

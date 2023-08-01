@@ -1,0 +1,12 @@
+Sum 1-n
+
+Given:
+    - n: an integer
+
+To do:
+    - Compute the sum: 1 + 2 + ... + n
+
+
+sum = 0
+for i from 1 to n (inclusive):
+    sum += i

@@ -1,0 +1,49 @@
+Fizz Buzz
+
+Given:
+    - Rules of the game Fizz Buzz
+    - a parameter `n` till when the game must be played
+
+To do:
+    - Play the game according to the given rules till `n`
+    - Display "pop" for numbers divisible by 7
+
+
+Version 0.1:
+    - void fizzbuzz(unsigned int n):
+        for i from 1 to n:
+            if i % 3:
+                print "fizz"
+                if i % 5:
+                    print "buzz"
+                if % 7:
+                    print "pop"
+            elif i % 5:
+                print "buzz"
+                if i % 7:
+                    print "pop"
+            elif i % 7:
+                print "pop"
+            else:
+                print i
+
+
+Version 0.2:
+    - void fizzbuzz(int n) 
+        div = false       
+        for i from 1 to n:
+            if i % 3 == 0:
+                print "fizz"
+                div = true
+            if i % 5 == 0:
+                print "buzz"
+                div = true
+            if i % 7 == 0:
+                print "pop"
+                div = true
+            
+            if not div:                
+                print i
+            
+            div = false
+            print '\n'                

@@ -1,0 +1,8 @@
+Wraparound happens when you assign a negative integer to a variable defined as an unsigned integer.
+So, -1 would be the largest number representable by the data type;
+-2 would be 1 less that number, and so on.
+
+When you assign a positive integer greater than the largest possible number, then the value
+that gets assigned is simply the largest possible number.
+
+Side note: Using two's complement notation, the representation of -1 and the largest number would be same!

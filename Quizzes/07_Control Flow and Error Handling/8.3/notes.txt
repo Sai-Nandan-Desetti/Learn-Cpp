@@ -1,0 +1,23 @@
+Inverted Number Triangle
+
+Given:
+    - A given number triangle to print
+
+To do:
+    - Print the triangle as desired
+
+- Start with n = 5. Print all the way to 1.
+- Start with n = 4. Print all the way to 1.
+.
+.
+.
+- Each time start with a number 1 less than the previous row...
+... until you get to n = 1.
+Then, stop.
+
+- Have two loops:
+    - Outer loop: sets the `row_start` to the appropriate value
+        - i.e. in each iteration it decrements by 1
+        - Inner loop: 
+            -start from `row_start` and print all the way to 1
+        - stops when row_start == 0

@@ -1,0 +1,7 @@
+- 1.cpp contains code that generates the same sequence of random numbers each time the program is run.
+    - This is because the Mersenne Twister is initialized to the same value each time.
+
+- 2.cpp, therefore, initializes it to the system's clock
+
+- 3.cpp uses std::random_device.
+    - Use this.
