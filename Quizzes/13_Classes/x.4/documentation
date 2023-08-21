@@ -9,9 +9,11 @@
 #       TAG += value [value, ...]
 # Values that contain spaces should be placed between quotes (" ")
 
-PROJECT_NAME           = "Monster Generator"
+PROJECT_NAME           = "Blackjack"
 PROJECT_NUMBER         = 
 INPUT                  = 
+HTML_EXTENSION         = ''
+HTML_OUTPUT            = docs
 JAVADOC_AUTOBRIEF      = YES
 EXTRACT_ALL            = YES
 BUILTIN_STL_SUPPORT    = YES

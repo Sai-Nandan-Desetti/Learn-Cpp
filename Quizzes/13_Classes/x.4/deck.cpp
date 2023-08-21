@@ -34,6 +34,12 @@ void Deck::print() const
         std::cout << card << ' ';    
 }
 
+/**
+ * @details
+ *  - Uses a Mersenne Twister to arrange the deck in a random order
+ *  - Sets \c m_cardIndex to 0.
+ * 
+ */
 void Deck::shuffle()
 {
     // static so that it gets seeded only once
@@ -43,6 +49,11 @@ void Deck::shuffle()
     m_cardIndex = 0;
 }
 
+/**
+ * @details
+ *  - Deals a card pointed to by \c m_cardIndex
+ * 
+ */
 const Card& Deck::dealCard()
 {            
     return m_deck[m_cardIndex++];

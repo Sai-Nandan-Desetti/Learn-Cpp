@@ -14,9 +14,24 @@
 #include "deck.h"
 #include <vector>
 
+/**
+ * @brief \c Players is a vector of \c Player addresses
+ * @details
+ *  - Run-time polymorphism requires us to use the base class address.
+ * 
+ */
 using Players = std::vector<Player*>;
 
+/**
+ * @brief If a player's score reaches beyond this limit, he is busted.
+ * 
+ */
 static constexpr int playerLimit{ 21 };
+
+/**
+ * @brief If the dealer's score reaches beyond this limit, he has to stand.
+ * 
+ */
 static constexpr int dealerLimit{ 17 };
 
 /**
@@ -29,7 +44,7 @@ private:
     Deck m_deck{};    
     std::size_t m_numPlayers{};
     Players m_players{};
-    Players active_players{};
+    Players active_players{}; // holds the players not busted yet
 
     /**
      * @brief A utility function to check if the game is over or not
@@ -40,6 +55,11 @@ private:
      */
     bool gameNotOver();
 
+    /**
+     * @brief Get the maximum score among non-busted players
+     * 
+     * @return int 
+     */
     int getMaxScore();
     
     /**
@@ -49,6 +69,13 @@ private:
     void computePlayerOutcomes();    
 
 public:
+    /**
+     * @brief Initialize the players playing \c Blackjack
+     * @details
+     *  - Initially all players are active (naturally).
+     * @param players
+     *  
+     */
     Blackjack(Players& players)
     {
         m_numPlayers = players.size();
