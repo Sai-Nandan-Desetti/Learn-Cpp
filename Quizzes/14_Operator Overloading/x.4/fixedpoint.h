@@ -5,7 +5,7 @@
 #include <iostream>
 #include <cassert>
 
-constexpr std::int16_t fractionRange{ 100 };
+constexpr std::int8_t fractionRange{ 100 };
 
 class FixedPoint2
 {

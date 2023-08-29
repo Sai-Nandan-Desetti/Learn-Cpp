@@ -36,6 +36,11 @@ FixedPoint2::FixedPoint2(std::int16_t integer, std::int8_t fraction)
     setValue(integer, fraction);
 }
 
+/**
+ * @details
+ * - Explain how negative output for \c % is useful here.
+ * 
+ */
 FixedPoint2::FixedPoint2(double num)
 {    
     std::int16_t num_integer{ static_cast<std::int16_t>(std::ceil(num * fractionRange)) };
