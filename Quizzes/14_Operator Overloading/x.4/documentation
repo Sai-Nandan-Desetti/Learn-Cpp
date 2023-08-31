@@ -9,7 +9,7 @@
 #       TAG += value [value, ...]
 # Values that contain spaces should be placed between quotes (" ")
 
-PROJECT_NAME           = "Fixed Point 2"
+PROJECT_NAME           = "2-decimal Fixed-Point Numbers"
 PROJECT_NUMBER         = 
 INPUT                  = 
 JAVADOC_AUTOBRIEF      = YES
