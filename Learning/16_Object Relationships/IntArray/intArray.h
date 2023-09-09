@@ -176,15 +176,16 @@ public:
      */
     friend void swap(IntArray& first, IntArray& second);
 
-    /**
-     * @brief Overload \c operator<< to print an array.
-     * 
-     * @param out: Generally, \c std::cout 
-     * @param arr: reference to a \c const \c IntArray 
-     * @return std::ostream& 
-     */
-    friend std::ostream& operator<<(std::ostream& out, const IntArray& arr);
-
 };
+
+
+/**
+ * @brief Overload \c operator<< to print an array.
+ * 
+ * @param out: Generally, \c std::cout 
+ * @param arr: reference to a \c const \c IntArray 
+ * @return std::ostream& 
+ */
+std::ostream& operator<<(std::ostream& out, const IntArray& arr);
 
 #endif

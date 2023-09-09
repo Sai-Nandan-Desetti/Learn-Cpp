@@ -208,7 +208,7 @@ void swap(IntArray& first, IntArray& second)
 
 std::ostream& operator<<(std::ostream& out, const IntArray& arr)
 {
-    for (std::size_t i{ 0 }; i < arr.m_size; ++i)
+    for (std::size_t i{ 0 }; i < arr.size(); ++i)
         out << arr[i] << ' ';
 
     return out;
