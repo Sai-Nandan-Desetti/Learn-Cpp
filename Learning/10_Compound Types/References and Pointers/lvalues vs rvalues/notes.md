@@ -14,7 +14,7 @@
 * Rvalues aren’t identifiable (meaning they have to be used immediately), and only exist within the scope of the expression in which they are used.
 
 
-**Distinguishing between lvalues and rvalues**:
+### Distinguishing between lvalues and rvalues:
 
 It seems like we can use `&` to distinguish between lvalues and rvalues because it requires an lvalue as an operand:
 
@@ -50,3 +50,6 @@ Imagine you received a gift from someone and you want to meet that person. If yo
 1. **r-values are objects that aren't identifiable. And objects are regions of storage in memory. So, they too should have an address, right?** They, of course, occupy some storage in memory. It's just that you can have no way of getting to know that address. Using the analogy above, the mysterious benefactor is, of course, living somewhere! We just don't (rather, can't) know where.
 
 2. **What do you mean by the *identity* of an object?** The lesson says that the concept of an identity isn't well-defined but the identities of different entities can be differentiated (typically) by comparing their addresses. Like, the address itself isn't your identity; but it can be used to identify you in order to send you something.
+
+### References
+* [Learncpp - Value categories: lvalues and rvalues](https://www.learncpp.com/cpp-tutorial/value-categories-lvalues-and-rvalues/)
