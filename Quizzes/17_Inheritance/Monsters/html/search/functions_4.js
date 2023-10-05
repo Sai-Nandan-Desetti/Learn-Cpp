@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['isdead_0',['isDead',['../class_creature.html#af8ef83b3e19f7ca61a406a225deb4208',1,'Creature']]]
+  ['haswon_0',['hasWon',['../class_player.html#a9c82c496201e02d3e86dca2b77521f1a',1,'Player']]]
 ];

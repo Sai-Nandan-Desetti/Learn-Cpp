@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['type_0',['Type',['../class_monster.html#adbb6ea87866d6562d689849f9919d743',1,'Monster']]]
+  ['potion_0',['Potion',['../potion_8h.html#ac3655e3282abaa4691e98ad0a042d9e4',1,'potion.h']]]
 ];

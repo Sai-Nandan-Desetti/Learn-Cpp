@@ -91,7 +91,7 @@ Inheritance diagram for Creature:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aff9f65cdcc328b140067254158731793"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_creature.html#aff9f65cdcc328b140067254158731793">Creature</a> (std::string_view name, char symbol, int health, int damage, int gold)</td></tr>
+<tr class="memitem:aff9f65cdcc328b140067254158731793"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_creature.html#aff9f65cdcc328b140067254158731793">Creature</a> (std::string_view name, char symbol, int <a class="el" href="potion_8h.html#ac3655e3282abaa4691e98ad0a042d9e4a555bf8344ca0caf09b42f55e185526d8">health</a>, int damage, int gold)</td></tr>
 <tr class="separator:aff9f65cdcc328b140067254158731793"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f86f3a02291083ef7a875024eb91cb8"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_creature.html#a3f86f3a02291083ef7a875024eb91cb8">getName</a> () const</td></tr>
 <tr class="separator:a3f86f3a02291083ef7a875024eb91cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -112,6 +112,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aacb6ed83f7c2de1ba9eabcfdb28b370f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_creature.html#aacb6ed83f7c2de1ba9eabcfdb28b370f">addGold</a> (int increaseBy)</td></tr>
 <tr class="memdesc:aacb6ed83f7c2de1ba9eabcfdb28b370f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increases the amount of <code><a class="el" href="class_creature.html">Creature</a>'s</code> gold by a given amount.  <br /></td></tr>
 <tr class="separator:aacb6ed83f7c2de1ba9eabcfdb28b370f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addfc91e887cd8c6288f78f25dd128db1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_creature.html#addfc91e887cd8c6288f78f25dd128db1">attack</a> (<a class="el" href="class_creature.html">Creature</a> &amp;other)</td></tr>
+<tr class="memdesc:addfc91e887cd8c6288f78f25dd128db1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>other's</code> health is reduced by the damage inflicted by <code>*this</code>.  <br /></td></tr>
+<tr class="separator:addfc91e887cd8c6288f78f25dd128db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -335,6 +338,32 @@ false: NOT YET </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">increaseBy</td><td>amount to increase by. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="addfc91e887cd8c6288f78f25dd128db1" name="addfc91e887cd8c6288f78f25dd128db1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addfc91e887cd8c6288f78f25dd128db1">&#9670;&#160;</a></span>attack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Creature::attack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_creature.html">Creature</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>other's</code> health is reduced by the damage inflicted by <code>*this</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td></td></tr>
   </table>
   </dd>
 </dl>

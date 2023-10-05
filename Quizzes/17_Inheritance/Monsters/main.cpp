@@ -4,7 +4,6 @@
  * @brief A game to fight monsters
  * @version 0.6
  * @date 2023-10-04
- * 
  */
 
 /**
@@ -43,14 +42,14 @@ int main()
     std::string name{};
     std::cin >> name;
 
-    // convert name to lower case
+    // convert name to upper case
     std::transform(
         name.begin(),
         name.end(),
         name.begin(),
         [](unsigned char c)
         {
-            return std::tolower(c);
+            return std::toupper(c);
         }
     );
     Player player{ name };

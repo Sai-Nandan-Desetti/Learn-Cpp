@@ -10,9 +10,9 @@ const Creature& Monster::getDefaultCreature(Type type)
 {
     static const std::array<Creature, static_cast<std::size_t>(Type::max_types)> monsterData{
     { 
-        { "dragon", 'D', 20, 4, 100 },
-        { "orc", 'o', 4, 2, 25 },
-        { "slime", 's', 1, 1, 10 }
+        { "DRAGON", 'D', 20, 4, 100 },
+        { "ORC", 'o', 4, 2, 25 },
+        { "SLIME", 's', 1, 1, 10 }
     }};
 
     return monsterData.at(static_cast<std::size_t>(type));

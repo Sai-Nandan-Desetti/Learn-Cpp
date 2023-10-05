@@ -2,13 +2,14 @@
  * @file creature.h
  * @author DSN
  * @brief Defines a \c Creature
- * @version 0.1
+ * @version 0.2
  * @date 2023-10-05 
  */
 
 #ifndef CREATURE_H
 #define CREATURE_H
 
+#include "potion.h"
 #include <string_view>
 
 class Creature
@@ -18,7 +19,7 @@ protected:
     char m_symbol{};
     int m_health{};
     int m_damage{};
-    int m_gold{};
+    int m_gold{};    
 
 public:
     // Creature() = default;    
@@ -73,6 +74,7 @@ public:
      * @param other 
      */
     void attack(Creature& other);
+
 };
 
 #endif

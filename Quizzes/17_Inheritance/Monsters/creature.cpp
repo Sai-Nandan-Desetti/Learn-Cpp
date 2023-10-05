@@ -43,6 +43,6 @@ void Creature::addGold(int increaseBy)
 
 void Creature::attack(Creature& other)
 {
-    other.reduceHealth(this->getDamage());
-    std::cout << this->getName() << " hit " << other.getName() << " for " << this->getDamage() << " damage.\n";
+    other.reduceHealth(this->m_damage);
+    std::cout << this->m_name << " hit " << other.m_name << " for " << this->m_damage << " damage.\n";
 }

@@ -1,11 +1,3 @@
-/**
- * @file game.cpp
- * @author DSN
- * @brief Defines the game play
- * @version 0.1
- * @date 2023-10-05
- */
-
 #include "game.h"
 #include "io.h"
 #include "random.h"
@@ -22,7 +14,22 @@ bool Game::canEscape()
     return static_cast<bool>(Random::get(0, 1));
 }
 
-void Game::play(Player& player)
+/**
+ * @details
+ * The probability of finding a potion must be 30%.
+ *  - A number in the range [0,9] is randomly (and uniformly) generated.
+ *  - There's a 30% chance that the number would be in [0,3).
+ *  - Conveniently, I've defined only three potions.
+ *      - So, the number can be used directly to get the corresponding potion.
+ */
+int Game::potionFound()
+{    
+    int p{ Random::get(0, 9) };
+
+    return p < +Potion::max_potions ? p : -1;    
+}
+
+void Game::play(Player &player)
 {
     do
     {
@@ -73,6 +80,23 @@ void Game::play(Player& player)
                 std::cout << player.getName() <<" has found " << monster.getGold() << " gold.\n";
             }
         }
+        
+        // check if there's a potion for you
+        int potionNumber{ potionFound() };
+        if (potionNumber != -1)
+        {
+            std::cout << player.getName() << " has found a mythical potion.\n";          
+            do
+            {
+                std::cout << "Drink? (y/n): ";
+                std::cin >> choice;
+                IO::inputCleanup();
+            } while (not (choice == 'y' or choice == 'n'));
+            
+            if (choice == 'y')
+                player.drink(static_cast<Potion>(potionNumber));
+        }
+        
 
     } while (not (player.isDead() or player.hasWon()));
 

@@ -39,7 +39,13 @@ public:
      * @return true: WINNER! 
      * @return false: LEARNER. 
      */
-    bool hasWon() const;    
+    bool hasWon() const;
+    
+    /**
+     * @brief Defines the effects of drinking a \c Potion.
+     * 
+     */
+    void drink(Potion potion);
 };
 
 #endif
