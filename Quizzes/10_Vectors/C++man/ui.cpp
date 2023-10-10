@@ -7,11 +7,13 @@ void UI::displayPrompt(std::string_view word, std::string_view chances)
     std::cout << "Your guess: ";
 }
 
-char UI::getUserGuess() {
+char UI::getUserGuess()
+{
     char guess{};
     bool isValidGuess{};
     
-    do {        
+    do
+    {        
         isValidGuess = false;
         std::cin >> guess;
 
